@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKROOMS LOST DIMENSION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="LOGOBACKROOMSLOSTDIMENSION.png" alt="Backrooms Lost Dimension" class="brand-logo">
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-i18n="nav.home">Home</a>
+                <a href="privacy-policy/index.html" class="nav-link" data-i18n="nav.privacy">Privacy Policy</a>
+                <div class="language-selector">
+                    <label for="lang-select" class="visually-hidden">Language</label>
+                    <select id="lang-select" aria-label="Language selector">
+                        <option value="en">English</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+                <a class="btn btn-steam" target="_blank" rel="noopener" href="https://store.steampowered.com/app/4036160/Backrooms_Lost_Dimension/">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 0L15 4V12L8 16L1 12V4L8 0Z" fill="currentColor"/>
+                    </svg>
+                    <span data-i18n="btn.wishlistSteam">Wishlist on Steam</span>
+                </a>
+                <a class="btn btn-epic" target="_blank" rel="noopener" href="https://store.epicgames.com/en-US/p/backrooms-between-lost-dimension-31b796?lang=en-US">
+                    <span data-i18n="btn.wishlistEpic">Wishlist on Epic</span>
+                </a>
+            </nav>
+            <!-- Mobile navigation drawer -->
+            <div class="mobile-nav" aria-hidden="true">
+                <div class="mobile-nav-content">
+                    <a href="#" class="mobile-link" data-i18n="nav.home">Home</a>
+                    <a href="privacy-policy/index.html" class="mobile-link" data-i18n="nav.privacy">Privacy Policy</a>
+                    <a href="https://store.epicgames.com/en-US/p/backrooms-between-lost-dimension-31b796?lang=en-US" target="_blank" rel="noopener" class="mobile-link" data-i18n="btn.wishlistEpic">Wishlist on Epic</a>
+                    <a href="https://store.steampowered.com/app/4036160/Backrooms_Lost_Dimension/" target="_blank" rel="noopener" class="mobile-link" data-i18n="btn.wishlistSteam">Wishlist on Steam</a>
+                    <div class="mobile-lang">
+                        <label for="lang-select-mobile" class="visually-hidden">Language</label>
+                        <select id="lang-select-mobile" aria-label="Language selector">
+                            <option value="en">English</option>
+                            <option value="it">Italiano</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">BACKROOMS</span>
+                    <span class="title-lost">LOST</span>
+                    <span class="title-dimension">DIMENSION</span>
+                    <div class="title-symbols">
+                        <span class="symbol">◆</span>
+                        <span class="symbol">●</span>
+                        <span class="symbol">■</span>
+                    </div>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">A Single-Player Horror Adventure</p>
+                <p class="hero-description" data-i18n="hero.description">
+                    Explore unsettling levels, solve unique puzzles, and survive terrifying encounters while following an original story. Free content updates with new levels will expand the experience and keep the nightmare evolving.
+                </p>
+                
+                <!-- Release Info -->
+                <div class="release-info">
+                    <div class="release-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M6 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H16C17.1 18 18 17.1 18 16V4C18 2.9 17.1 2 16 2H14V0H6V2ZM4 4H6V6H4V4ZM16 16H4V8H16V16ZM16 6H8V4H16V6Z" fill="currentColor"/>
+                        </svg>
+                        <span data-i18n="release.title">Epic Games Store Release</span>
+                    </div>
+                    
+                    <!-- Countdown Timer -->
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number">30</span>
+                            <span class="countdown-label" data-i18n="countdown.days">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">08</span>
+                            <span class="countdown-label" data-i18n="countdown.hours">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">08</span>
+                            <span class="countdown-label" data-i18n="countdown.minutes">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">45</span>
+                            <span class="countdown-label" data-i18n="countdown.seconds">Seconds</span>
+                        </div>
+                    </div>
+                    
+                    <div class="release-dates">
+                        <p data-i18n="release.exclusiveLine">October 30, 2025 • 6-month Epic Games Store exclusive</p>
+                        <p data-i18n="release.steamLine">Steam release: May 1, 2026</p>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-actions">
+                    <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=tu8uCkTr008">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M8 5V15L15 10L8 5Z" fill="currentColor"/>
+                        </svg>
+                        <span data-i18n="cta.watchTrailer">Watch Trailer</span>
+                    </a>
+                    <a class="btn btn-secondary" target="_blank" rel="noopener" href="https://store.epicgames.com/en-US/p/backrooms-between-lost-dimension-31b796?lang=en-US"><span data-i18n="btn.wishlistEpic">Wishlist on Epic</span></a>
+                    <a class="btn btn-accent" target="_blank" rel="noopener" href="https://store.steampowered.com/app/4036160/Backrooms_Lost_Dimension/"><span data-i18n="btn.wishlistSteam">Wishlist on Steam</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="features.title">Game Features</h2>
+            <div class="section-underline"></div>
+            <p class="section-subtitle" data-i18n="features.subtitle">Immerse yourself in a terrifying world filled with mysteries, puzzles, and endless corridors</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.immersion.title">Immersive Experience</h3>
+                    <p class="feature-description" data-i18n="features.immersion.desc">Explore a dark and captivating world, where every room hides secrets and every corner can surprise you.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 5H21V7H3V5ZM3 9H21V11H3V9ZM3 13H21V15H3V13ZM3 17H21V19H3V17Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.levels.title">300+ Levels</h3>
+                    <p class="feature-description" data-i18n="features.levels.desc">10 levels per chapter with over 300 levels total designed to test your skills and ingenuity.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.puzzles.title">Solve Puzzles</h3>
+                    <p class="feature-description" data-i18n="features.puzzles.desc">Challenge your mind with creative and intricate puzzles that unlock new areas and reveal secrets.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM17 12H7V10H17V12ZM15 16H7V14H15V16Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.story.title">Story Fragments</h3>
+                    <p class="feature-description" data-i18n="features.story.desc">Discover the story piece by piece through short narrative sequences as you explore the world.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.early.title">Early Access</h3>
+                    <p class="feature-description" data-i18n="features.early.desc">Experience the game during development with regular updates and community feedback integration.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.updates.title">Free Updates</h3>
+                    <p class="feature-description" data-i18n="features.updates.desc">Continuous content expansions with new levels, features, and improvements at no additional cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title" data-i18n="screenshots.title">Screenshots</h2>
+            <div class="section-underline"></div>
+            <p class="section-subtitle" data-i18n="screenshots.subtitle">Explore the haunting visuals and atmospheric environments of the Backrooms</p>
+            
+            <div class="screenshot-gallery">
+                <div class="gallery-container">
+                    <button class="gallery-nav gallery-nav-left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <div class="screenshot-main">
+                        <img src="ss_215a2a14e57ca970977f4d2e7efa8c917d530f65.600x338.jpg" alt="Backrooms Screenshot" class="screenshot-image">
+                        <div class="gallery-counter">
+                            <span class="current-slide">1</span> / <span class="total-slides">6</span>
+                        </div>
+                    </div>
+                    <button class="gallery-nav gallery-nav-right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access Section -->
+    <section class="early-access">
+        <div class="container">
+            <div class="early-access-card">
+                <h2 class="card-title" data-i18n="early.title">Coming to Early Access</h2>
+                <p class="card-description" data-i18n="early.desc">
+                    Be part of the development journey! The game will launch in Early Access, allowing you to experience the nightmare while providing valuable feedback that shapes the final experience.
+                </p>
+                <div class="early-access-features">
+                    <div class="feature-item">
+                        <div class="feature-icon-small">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 4H17V6H3V4ZM3 8H17V10H3V8ZM3 12H17V14H3V12ZM3 16H17V18H3V16Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span data-i18n="early.item1">10 Initial Levels</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-small">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 2L12.5 7.5L18 10L12.5 12.5L10 18L7.5 12.5L2 10L7.5 7.5L10 2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span data-i18n="early.item2">Regular Free Updates</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-small">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M2 3H18V5H2V3ZM2 7H18V9H2V7ZM2 11H18V13H2V11ZM2 15H18V17H2V15Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span data-i18n="early.item3">Community Feedback</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">BACKROOMS</h3>
+                    <p class="footer-subtitle">LOST DIMENSION</p>
+                    <p class="footer-description" data-i18n="footer.description">
+                        A single-player horror adventure that will test your courage and puzzle-solving skills. Enter the endless maze of the Backrooms and discover the truth behind the Lost Dimension.
+                    </p>
+                    
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-section-title" data-i18n="footer.quick">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="privacy-policy/index.html" class="footer-link" data-i18n="nav.privacy">Privacy Policy</a></li>
+                        <li><a href="https://store.epicgames.com/en-US/p/backrooms-between-lost-dimension-31b796?lang=en-US" target="_blank" rel="noopener" class="footer-link">Epic Games Store <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 2L4 8L2 6" stroke="currentColor" stroke-width="2"/></svg></a></li>
+                        <li><a href="https://store.steampowered.com/app/4036160/Backrooms_Lost_Dimension/" target="_blank" rel="noopener" class="footer-link">Steam Page <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 2L4 8L2 6" stroke="currentColor" stroke-width="2"/></svg></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-section-title" data-i18n="footer.release">Release Dates</h4>
+                    <div class="release-dates-footer">
+                        <div class="release-date-item">
+                            <span class="platform">Epic Games Store</span>
+                            <span class="date">October 30, 2025</span>
+                        </div>
+                        <div class="release-date-item">
+                            <span class="platform">Steam</span>
+                            <span class="date">May 1, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="game-tags">
+                    <h4 class="tags-title" data-i18n="footer.tags">Game Tags</h4>
+                    <div class="tags-container">
+                        <span class="tag" data-i18n="tags.horror">Horror</span>
+                        <span class="tag" data-i18n="tags.adventure">Adventure</span>
+                        <span class="tag" data-i18n="tags.exploration">Exploration</span>
+                        <span class="tag" data-i18n="tags.puzzle">Puzzle</span>
+                        <span class="tag" data-i18n="tags.single">Single-Player</span>
+                        <span class="tag" data-i18n="tags.indie">Indie</span>
+                        <span class="tag" data-i18n="tags.early">Early Access</span>
+                        <span class="tag" data-i18n="tags.psych">Psychological Horror</span>
+                        <span class="tag" data-i18n="tags.survival">Survival Horror</span>
+                        <span class="tag" data-i18n="tags.fp">First-Person</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
