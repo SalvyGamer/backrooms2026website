@@ -1,37 +1,12 @@
-// Countdown Timer
-function initCountdown() {
-    // Termine: 30 Ottobre 2025 alle 15:30 (ora locale)
-    const targetDate = new Date('2025-10-30T15:30:00').getTime();
-    
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-        
-        if (distance < 0) {
-            // Countdown finished
-            document.querySelectorAll('.countdown-number').forEach(el => {
-                el.textContent = '00';
-            });
-            return;
-        }
-        
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        const countdownNumbers = document.querySelectorAll('.countdown-number');
-        if (countdownNumbers.length >= 4) {
-            countdownNumbers[0].textContent = days.toString().padStart(2, '0');
-            countdownNumbers[1].textContent = hours.toString().padStart(2, '0');
-            countdownNumbers[2].textContent = minutes.toString().padStart(2, '0');
-            countdownNumbers[3].textContent = seconds.toString().padStart(2, '0');
-        }
+// Available Now Animation
+function initAvailableNow() {
+    const availableNow = document.querySelector('.available-now');
+    if (availableNow) {
+        // Trigger animation on load
+        setTimeout(() => {
+            availableNow.classList.add('animate');
+        }, 100);
     }
-    
-    // Update immediately and then every second
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
 }
 
 // Smooth scrolling for navigation links
@@ -65,7 +40,7 @@ function initGallery() {
         { type: 'image', src: 'ss_bc5031e736f439ab19f9aa0d49e00f82fdb56dda.600x338.jpg', alt: 'Backrooms Screenshot 3' },
         { type: 'image', src: 'ss_d8baa5ef875e60df3dffdb76ee2d268fcd6d62b4.600x338.jpg', alt: 'Backrooms Screenshot 4' },
         { type: 'image', src: 'ss_e9d4de2d1ad1faaaebca5114006e7885e1ab884a.600x338.jpg', alt: 'Backrooms Screenshot 5' },
-        { type: 'video', src: 'https://www.youtube.com/embed/tu8uCkTr008', title: 'Backrooms Lost Dimension - Gameplay Trailer' }
+        { type: 'video', src: 'https://www.youtube.com/embed/HMbOWG2OOlo', title: 'Backrooms Lost Dimension - Gameplay Trailer' }
     ];
     
     let currentIndex = 0;
@@ -247,7 +222,7 @@ function initMobileMenu() {
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    initCountdown();
+    initAvailableNow();
     initSmoothScrolling();
     initGallery();
     initButtonInteractions();
@@ -290,12 +265,10 @@ function initI18n() {
             'hero.subtitle': 'A Single-Player Horror Adventure',
             'hero.description': 'Explore unsettling levels, solve unique puzzles, and survive terrifying encounters while following an original story. Free content updates with new levels will expand the experience and keep the nightmare evolving.',
             'release.title': 'Epic Games Store Release',
-            'release.exclusiveLine': 'October 30, 2025 • 6-month Epic Games Store exclusive',
+            'release.exclusiveLine': 'November 2, 2025 • 6-month Epic Games Store exclusive',
             'release.steamLine': 'Steam release: May 1, 2026',
-            'countdown.days': 'Days',
-            'countdown.hours': 'Hours',
-            'countdown.minutes': 'Minutes',
-            'countdown.seconds': 'Seconds',
+            'available.now': 'AVAILABLE NOW',
+            'available.on': 'on Epic Games Store',
             'features.title': 'Game Features',
             'features.subtitle': 'Immerse yourself in a terrifying world filled with mysteries, puzzles, and endless corridors',
             'features.immersion.title': 'Immersive Experience',
@@ -391,12 +364,10 @@ function initI18n() {
             'hero.subtitle': 'Un’avventura horror per giocatore singolo',
             'hero.description': 'Esplora livelli inquietanti, risolvi enigmi unici e sopravvivi a incontri terrificanti seguendo una storia originale. Aggiornamenti gratuiti con nuovi livelli espanderanno l’esperienza e terranno vivo l’incubo.',
             'release.title': 'Uscita su Epic Games Store',
-            'release.exclusiveLine': '30 ottobre 2025 • Esclusiva Epic Games Store di 6 mesi',
+            'release.exclusiveLine': '2 novembre 2025 • Esclusiva Epic Games Store di 6 mesi',
             'release.steamLine': 'Uscita su Steam: 1 maggio 2026',
-            'countdown.days': 'Giorni',
-            'countdown.hours': 'Ore',
-            'countdown.minutes': 'Minuti',
-            'countdown.seconds': 'Secondi',
+            'available.now': 'DISPONIBILE ORA',
+            'available.on': 'su Epic Games Store',
             'features.title': 'Caratteristiche del Gioco',
             'features.subtitle': 'Immergiti in un mondo terrificante pieno di misteri, enigmi e corridoi senza fine',
             'features.immersion.title': 'Esperienza Immersiva',
@@ -492,12 +463,10 @@ function initI18n() {
             'hero.subtitle': 'Une aventure d’horreur solo',
             'hero.description': 'Explorez des niveaux inquiétants, résolvez des énigmes uniques et survivez à des rencontres terrifiantes tout en suivant une histoire originale. Des mises à jour gratuites avec de nouveaux niveaux feront évoluer l’expérience.',
             'release.title': 'Sortie sur Epic Games Store',
-            'release.exclusiveLine': '30 octobre 2025 • Exclusivité Epic Games Store pendant 6 mois',
+            'release.exclusiveLine': '2 novembre 2025 • Exclusivité Epic Games Store pendant 6 mois',
             'release.steamLine': 'Sortie Steam : 1 mai 2026',
-            'countdown.days': 'Jours',
-            'countdown.hours': 'Heures',
-            'countdown.minutes': 'Minutes',
-            'countdown.seconds': 'Secondes',
+            'available.now': 'DISPONIBLE MAINTENANT',
+            'available.on': 'sur Epic Games Store',
             'features.title': 'Fonctionnalités du jeu',
             'features.subtitle': 'Plongez dans un monde terrifiant rempli de mystères, d’énigmes et de couloirs sans fin',
             'features.immersion.title': 'Expérience immersive',
@@ -593,12 +562,10 @@ function initI18n() {
             'hero.subtitle': 'Ein Einzelspieler-Horror-Abenteuer',
             'hero.description': 'Erkunde unheimliche Levels, löse einzigartige Rätsel und überlebe furchterregende Begegnungen, während du einer originalen Geschichte folgst. Kostenlose Inhaltsupdates mit neuen Levels erweitern das Erlebnis.',
             'release.title': 'Erscheinung im Epic Games Store',
-            'release.exclusiveLine': '30. Oktober 2025 • 6-monatige Epic-Exklusivität',
+            'release.exclusiveLine': '2. November 2025 • 6-monatige Epic-Exklusivität',
             'release.steamLine': 'Steam-Veröffentlichung: 1. Mai 2026',
-            'countdown.days': 'Tage',
-            'countdown.hours': 'Stunden',
-            'countdown.minutes': 'Minuten',
-            'countdown.seconds': 'Sekunden',
+            'available.now': 'JETZT VERFÜGBAR',
+            'available.on': 'im Epic Games Store',
             'features.title': 'Spiel-Features',
             'features.subtitle': 'Tauche ein in eine furchterregende Welt voller Geheimnisse, Rätsel und endloser Korridore',
             'features.immersion.title': 'Immersives Erlebnis',
@@ -694,12 +661,10 @@ function initI18n() {
             'hero.subtitle': 'Una aventura de terror para un jugador',
             'hero.description': 'Explora niveles inquietantes, resuelve rompecabezas únicos y sobrevive a encuentros terroríficos siguiendo una historia original. Actualizaciones gratuitas con nuevos niveles ampliarán la experiencia.',
             'release.title': 'Lanzamiento en Epic Games Store',
-            'release.exclusiveLine': '30 de octubre de 2025 • Exclusiva de Epic durante 6 meses',
+            'release.exclusiveLine': '2 de noviembre de 2025 • Exclusiva de Epic durante 6 meses',
             'release.steamLine': 'Lanzamiento en Steam: 1 de mayo de 2026',
-            'countdown.days': 'Días',
-            'countdown.hours': 'Horas',
-            'countdown.minutes': 'Minutos',
-            'countdown.seconds': 'Segundos',
+            'available.now': 'DISPONIBLE AHORA',
+            'available.on': 'en Epic Games Store',
             'features.title': 'Características del juego',
             'features.subtitle': 'Sumérgete en un mundo aterrador lleno de misterios, acertijos y pasillos interminables',
             'features.immersion.title': 'Experiencia inmersiva',
